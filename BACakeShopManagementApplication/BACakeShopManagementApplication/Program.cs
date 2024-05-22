@@ -28,8 +28,10 @@ namespace BACakeShopManagementApplication
             Console.WriteLine("-------WELCOME TO BA CAKE SHOP MANAGEMENT APPLICATION-------");
             Console.WriteLine("------------------------------------------------------------");
 
+            
             Console.WriteLine("Please enter the use name: ");
             string useName = Console.ReadLine();
+            
             Console.WriteLine("Please enter the password:");
             string passWord = Console.ReadLine();
             

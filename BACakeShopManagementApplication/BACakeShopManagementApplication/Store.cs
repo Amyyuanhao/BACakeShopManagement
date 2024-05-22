@@ -8,6 +8,12 @@ namespace BACakeShopManagementApplication
 {
     internal class Store
     {
+        public string Name { get; set; }
+        public string Address { get; set; }
+        public string  Phonenumber { get; set; }
+        public List<Manager>[] managers { get; set; }
+        public List<Cake>[] cakes { get; set; }
+        public List<Drink>[] drinks { get; set; }
 
     }
 }

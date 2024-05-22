@@ -14,6 +14,7 @@ namespace BACakeShopManagementApplication
             Console.WriteLine("test");
 
             Console.WriteLine("welcome to word!");
+            Console.WriteLine("text");
         }
     }
 }

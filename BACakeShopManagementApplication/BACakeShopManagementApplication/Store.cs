@@ -34,6 +34,10 @@ namespace BACakeShopManagementApplication
         public void DisplayCakeStoreDitails(string name, string address, string phoneNumber) 
         {
             Console.WriteLine($"Company name: \t{name}\nAddress: \t{address}\nPhone number: \t{phoneNumber}\n");
+
+            Console.WriteLine("this is a text message for text newbranch function");
         }
+
+        
     }
 }

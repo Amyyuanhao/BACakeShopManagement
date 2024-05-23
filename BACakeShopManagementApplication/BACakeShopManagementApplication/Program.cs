@@ -34,7 +34,7 @@ namespace BACakeShopManagementApplication
             store.DisplayCakeStoreDitails("BA", "addr", "1121");
 
             var exitSystem = false;
-            int choice = 0;
+            
             //writeline menu items
 
             while (!exitSystem)
@@ -47,7 +47,7 @@ namespace BACakeShopManagementApplication
                 Console.WriteLine("5. Add writing on cake");
                 Console.WriteLine("6. Add drink");
                 Console.WriteLine("7. Remove drink");
-                Console.WriteLine("8. Search Cake (by custmer name)");
+                Console.WriteLine("8. Search Cake by custmer name");
                 Console.WriteLine("99. Exit");
 
                 string selectedAction = Console.ReadLine();
@@ -55,43 +55,51 @@ namespace BACakeShopManagementApplication
                 switch (selectedAction)
                 {
                     case "1":
-                      
                         Console.WriteLine("Adding new manager");
+                        //TODO: AddNewManager()
+                        Console.ReadKey();
                         break;
 
                     case "2":
                        
                         Console.WriteLine("Removing manager");
+                        //TODO: RemoveManager()
                         break;
 
                     case "3":
                        
                         Console.WriteLine("Adding new cake");
+                        //TODO: AddNewCake()
                         break;
 
                     case "4":
                         
                         Console.WriteLine("Removeing cake");
+                        //TODO: RemoveCake()
                         break;
 
                     case "5":
                         
                         Console.WriteLine("Adding writing on cake");
+                        //TODO: AddWritingOnCake()
                         break;
 
                     case "6":
                         
                         Console.WriteLine("Adding new drink");
+                        //TODO: AddNewDrink
                         break;
 
                     case "7":
                         
                         Console.WriteLine("Removing drink");
+                        //TODO: RemoveDrink()
                         break;
 
                     case "8":
                         
                         Console.WriteLine("Search cake (by custmer name)");
+                        //TODO: SearchCakeByUserName()
                         break;
 
                     case "99":

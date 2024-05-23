@@ -11,30 +11,35 @@ namespace BACakeShopManagementApplication
     {
         static void Main(string[] args)
         {
-            //Initiate the store object
+
+            //Initialize the store object
             //TODO: Login 
-            //TODO:
-            //Menu skeleton
-            //- 1. AddManager
-            //- 2. RemoveManger
-            //- 3. AddCake
-            //- 4. RemoveCake
-            //- 5. AddWritingMessageOnCake
-            //- 6. AddDrink
-            // -7. RemoveDrink
-            // -8. SearchCakeByCustmerName
-            // -0. Exit
+            //TODO: Welcome Message
+            //TODO: Menu skeleton
+            //TODO:- 1. AddManager
+            //TODO:- 2. RemoveManger
+            //TODO:- 3. AddCake
+            //TODO:- 4. RemoveCake
+            //TODO:- 5. AddWritingMessageOnCake
+            //TODO:- 6. AddDrink
+            //TODO: -7. RemoveDrink
+            //TODO: -8. SearchCakeByCustmerName
+            //TODO: -0. Exit
+
+
+            var store = new Store("BA", "addr", "1121", "Baibai", "123");
 
             Console.WriteLine("-------WELCOME TO BA CAKE SHOP MANAGEMENT APPLICATION-------");
             Console.WriteLine("------------------------------------------------------------");
+            store.DisplayCakeStoreDitails("BA", "addr", "1121");
 
-            
-            Console.WriteLine("Please enter the use name: ");
-            string useName = Console.ReadLine();
-            
-            Console.WriteLine("Please enter the password:");
-            string passWord = Console.ReadLine();
-            
+
+            //Console.WriteLine("Please enter the use name: ");
+            //string useName = Console.ReadLine();
+
+            //Console.WriteLine("Please enter the password:");
+            //string passWord = Console.ReadLine();
+
 
 
 

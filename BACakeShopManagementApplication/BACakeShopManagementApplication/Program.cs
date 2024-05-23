@@ -24,7 +24,7 @@ namespace BACakeShopManagementApplication
             //TODO:- 6. AddDrink
             //TODO: -7. RemoveDrink
             //TODO: -8. SearchCakeByCustmerName
-            //TODO: -0. Exit
+            //TODO: -99. Exit
 
 
             var store = new Store("BA", "addr", "1121", "Baibai", "123");
@@ -33,12 +33,87 @@ namespace BACakeShopManagementApplication
             Console.WriteLine("------------------------------------------------------------");
             store.DisplayCakeStoreDitails("BA", "addr", "1121");
 
+            var exitSystem = false;
+            int choice = 0;
+            //writeline menu items
 
-            //Console.WriteLine("Please enter the use name: ");
-            //string useName = Console.ReadLine();
+            while (!exitSystem)
+            {
+                Console.WriteLine("Please select the operation: ");
+                Console.WriteLine("1. Add Manager");
+                Console.WriteLine("2. RemoveManager");
+                Console.WriteLine("3. Add cake");
+                Console.WriteLine("4. Remove cake");
+                Console.WriteLine("5. Add writing on cake");
+                Console.WriteLine("6. Add drink");
+                Console.WriteLine("7. Remove drink");
+                Console.WriteLine("8. Search Cake (by custmer name)");
+                Console.WriteLine("99. Exit");
 
-            //Console.WriteLine("Please enter the password:");
-            //string passWord = Console.ReadLine();
+                string selectedAction = Console.ReadLine();
+
+                switch (selectedAction)
+                {
+                    case "1":
+                      
+                        Console.WriteLine("Adding new manager");
+                        break;
+
+                    case "2":
+                       
+                        Console.WriteLine("Removing manager");
+                        break;
+
+                    case "3":
+                       
+                        Console.WriteLine("Adding new cake");
+                        break;
+
+                    case "4":
+                        
+                        Console.WriteLine("Removeing cake");
+                        break;
+
+                    case "5":
+                        
+                        Console.WriteLine("Adding writing on cake");
+                        break;
+
+                    case "6":
+                        
+                        Console.WriteLine("Adding new drink");
+                        break;
+
+                    case "7":
+                        
+                        Console.WriteLine("Removing drink");
+                        break;
+
+                    case "8":
+                        
+                        Console.WriteLine("Search cake (by custmer name)");
+                        break;
+
+                    case "99":
+                        
+                        Console.WriteLine("Exit");
+                        Environment.Exit(0);
+                        break;
+
+                    default:
+                        Console.WriteLine("Wrong choice.. Please try again");
+                        break;
+
+                }//end of switch
+                    
+
+            }//end of while
+
+
+
+            
+
+            
 
 
 

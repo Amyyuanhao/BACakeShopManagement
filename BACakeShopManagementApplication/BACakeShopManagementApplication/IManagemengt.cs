@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace BACakeShopManagementApplication
 {
-    internal class Item
+    internal interface IManagemengt
     {
-        public string Name { get; set; }
-        public double Price { get; set; }
-        public int Id { get; set; }
+        void AddCake(string cakeName, double cakePrice, int cakeId);
+        void RemoveCake(int cakeId);
     }
 }

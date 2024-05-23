@@ -26,7 +26,7 @@ namespace BACakeShopManagementApplication
         { 
             get { return _id; } 
         }
-       
+        
         
     }
 }

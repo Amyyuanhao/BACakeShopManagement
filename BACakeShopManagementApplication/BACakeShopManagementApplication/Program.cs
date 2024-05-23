@@ -69,6 +69,14 @@ namespace BACakeShopManagementApplication
                     case "3":
                        
                         Console.WriteLine("Adding new cake");
+                        Console.WriteLine("Please enter the cake name");
+                        var cakeName = Console.ReadLine();
+                        Console.WriteLine("Please enter the cake price");
+                        var cakePrice=Convert.ToDouble( Console.ReadLine());
+                        Console.WriteLine("Please enter the cake ID");
+                        var cakeId=Convert.ToInt32 (Console.ReadLine());
+                        store.AddCake(cakeName, cakePrice, cakeId);
+                        Console.WriteLine($"This {cakeName} has been added, the price is {cakePrice}, the ID is {cakeId}");
                         //TODO: AddNewCake()
                         break;
 

@@ -29,9 +29,10 @@ namespace BACakeShopManagementApplication
 
             var store = new Store("BA", "addr", "1121", "Baibai", "123");
 
+            Console.WriteLine("------------------------------------------------------------");
             Console.WriteLine("-------WELCOME TO BA CAKE SHOP MANAGEMENT APPLICATION-------");
             Console.WriteLine("------------------------------------------------------------");
-            store.DisplayCakeStoreDitails("BA", "addr", "1121");
+            store.DisplayCakeStoreDitails("BA Bakery Store", "addr", "1121");
 
             var exitSystem = false;
             
@@ -41,7 +42,7 @@ namespace BACakeShopManagementApplication
             {
                 Console.WriteLine("Please select the operation: ");
                 Console.WriteLine("1. Add Manager");
-                Console.WriteLine("2. RemoveManager");
+                Console.WriteLine("2. Remove Manager");
                 Console.WriteLine("3. Add cake");
                 Console.WriteLine("4. Remove cake");
                 Console.WriteLine("5. Add writing on cake");

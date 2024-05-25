@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BACakeShopManagementApplication
 {
-    internal class Store: IManagemengt
+    internal class Store: IManagement
     {
         private readonly string _name;
 
@@ -28,23 +28,29 @@ namespace BACakeShopManagementApplication
         public string Address { get; set; }
         public string Phonenumber { get; set; }
         public List<Manager> Managers { get; set; } = new List<Manager> ();
-        public List<Cake> Cakes { get; set; } = new List<Cake>();
+        public List<Cake> cakes { get; set; } = new List<Cake>();
         public List<Drink> Drinks { get; set; } = new List<Drink>();
 
         public void DisplayCakeStoreDitails(string name, string address, string phoneNumber) 
         {
             Console.WriteLine($"Company name: \t{name}\nAddress: \t{address}\nPhone number: \t{phoneNumber}\n");
         }
-
-        public void AddCake(string cakeName, double cakePrice, int cakeId)
+        public void DisplayCakes()            
         {
-            Cakes.Add(new Cake(cakeName, cakePrice, cakeId));
+            if (this.cakes.Count == 0)
+            {
+                Console.WriteLine("No cake in the store");
+            }
+            else
+            {
+                foreach (Cake cakeA in this.cakes)
+                {
+                    cakeA.DisplayCakeDetailes();
+                }
+            }
         }
 
-        void IManagemengt.RemoveCake(int cakeId)
-        {
-            throw new NotImplementedException();
-        }
+      
     }
 }
  

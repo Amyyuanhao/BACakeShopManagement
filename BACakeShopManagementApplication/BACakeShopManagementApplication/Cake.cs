@@ -11,11 +11,15 @@ namespace BACakeShopManagementApplication
         public string CustmorName { get; set; }
         public string Message { get; set; }
 
-        public Cake(string name, double price, int id)
+        public Cake(string cakeName, double cakePrice, int cakeId)
         {
-            Name = name;
-            Price = price;
-            Id = id;
+            Name = cakeName;
+            Price =cakePrice;
+            Id = cakeId;
+        }
+        public Cake(int cakeId)
+        {
+            Id= cakeId;
         }
 
         public void WriteMessageOnCake(string custmorName,string message)
@@ -24,6 +28,11 @@ namespace BACakeShopManagementApplication
             this.CustmorName = custmorName;
         }
 
-     
+        public void DisplayCakeDetailes()
+        {
+            Console.WriteLine($"Cake Name: \t{Name}\nCake Price: \t{Price}\nCake ID: \t{Id}\n");
+        }
+
+       
     }
 }

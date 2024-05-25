@@ -12,4 +12,5 @@ namespace BACakeShopManagementApplication
         public double Price { get; set; }
         public int Id { get; set; }
     }
+    
 }

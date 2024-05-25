@@ -9,6 +9,8 @@ namespace BACakeShopManagementApplication
 {
     internal class Program
     {
+        private static object cakeRemove;
+
         static void Main(string[] args)
         {
 
@@ -35,8 +37,11 @@ namespace BACakeShopManagementApplication
             store.DisplayCakeStoreDitails("BA Bakery Store", "addr", "1121");
 
             var exitSystem = false;
+            //List<Cake> cakes = new List<Cake>();
+
             
             //writeline menu items
+
 
             while (!exitSystem)
             {
@@ -49,12 +54,14 @@ namespace BACakeShopManagementApplication
                 Console.WriteLine("6. Add drink");
                 Console.WriteLine("7. Remove drink");
                 Console.WriteLine("8. Search Cake by custmer name");
-                Console.WriteLine("99. Exit");
+                Console.WriteLine("99. Exit");                           
 
                 string selectedAction = Console.ReadLine();
 
                 switch (selectedAction)
+
                 {
+                    
                     case "1":
                         Console.WriteLine("Adding new manager");
                         //TODO: AddNewManager()
@@ -62,28 +69,56 @@ namespace BACakeShopManagementApplication
                         break;
 
                     case "2":
-                       
                         Console.WriteLine("Removing manager");
                         //TODO: RemoveManager()
                         break;
 
                     case "3":
-                       
-                        Console.WriteLine("Adding new cake");
+                        Console.WriteLine("You will Add a new Cake and then Display the Details Again");
+                        Console.WriteLine("--------------------------------------------------------------");
                         Console.WriteLine("Please enter the cake name");
                         var cakeName = Console.ReadLine();
-                        Console.WriteLine("Please enter the cake price");
-                        var cakePrice=Convert.ToDouble( Console.ReadLine());
+                        Console.WriteLine("Please enter the cake Price");
+                        var cakePrice = Convert.ToDouble(Console.ReadLine());
                         Console.WriteLine("Please enter the cake ID");
-                        var cakeId=Convert.ToInt32 (Console.ReadLine());
-                        store.AddCake(cakeName, cakePrice, cakeId);
-                        Console.WriteLine($"This {cakeName} has been added, the price is {cakePrice}, the ID is {cakeId}");
+                        var cakeId = Convert.ToInt32(Console.ReadLine());
+
+                        Cake newCake = new Cake(cakeName, cakePrice, cakeId);
+                        store.cakes.Add(newCake);
+                       
+                        foreach (Cake cakeN in store.cakes)
+                        {
+                            cakeN.DisplayCakeDetailes();
+
+                        }
+                        Console.WriteLine($"This {cakeName} cake has been added, the price is {cakePrice}, the ID is {cakeId}");
                         //TODO: AddNewCake()
                         break;
 
                     case "4":
+
+                        Console.WriteLine("You will Remove an existing cake and Display the Detail Again");
+                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("Please enter the ID of the existing cake");
+                        int idCakeRemove= Convert.ToInt32(Console.ReadLine());
+
+                        Cake removeCake = store.cakes.Find(c => c.Id == idCakeRemove);
+
+                        if (removeCake != null)
+                        {
+                            Console.WriteLine($"{idCakeRemove} found in the list");
+                            store.cakes.Remove(removeCake);
+                        }
+                        else 
+                        {
+                            Console.WriteLine($"This {removeCake} cake you want remove can not found!");
                         
-                        Console.WriteLine("Removeing cake");
+                        }
+
+                        
+                        store.DisplayCakes();
+                       
+
                         //TODO: RemoveCake()
                         break;
 

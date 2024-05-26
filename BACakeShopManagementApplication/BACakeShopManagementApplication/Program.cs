@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 namespace BACakeShopManagementApplication
 {
     internal class Program
-    {
+    { 
         private static object cakeRemove;
 
         static void Main(string[] args)
@@ -95,8 +95,8 @@ namespace BACakeShopManagementApplication
                         break;
 
                     case "3":
-                        Console.WriteLine("You will Add a new Cake.");
-                        Console.WriteLine("--------------------------------------------------------------");
+                        Console.WriteLine("You will Add a new Cake and Display the Detail Again.");
+                        Console.WriteLine("-----------------------------------------------------");
                         Console.WriteLine("Please enter the cake name");
                         var cakeName = Console.ReadLine();
                         Console.WriteLine("Please enter the cake Price");
@@ -117,7 +117,7 @@ namespace BACakeShopManagementApplication
                             cakeN.DisplayCakeDetailes();
 
                         }
-                        Console.WriteLine($"This {cakeName} cake has been added, the price is {cakePrice}, the ID is {cakeId}");
+                        Console.WriteLine($"The {cakeName} cake has been added, the price is {cakePrice}, the ID is {cakeId}");
                         Console.WriteLine("Press a key return to main menu.");
                         Console.ReadKey();
                         Console.Clear();
@@ -125,7 +125,6 @@ namespace BACakeShopManagementApplication
                         break;
 
                     case "4":
-
                         Console.WriteLine("You will Remove an existing cake and Display the Detail Again");
                         Console.WriteLine("-------------------------------------------------------------");
                         Console.WriteLine("Please enter the ID of the existing cake");
@@ -174,7 +173,7 @@ namespace BACakeShopManagementApplication
                             Console.ReadKey();
                             break;
                         }
-                        //TODO: AddWritingOnCake()
+                        
                         break;
 
                     case "6":
@@ -200,7 +199,7 @@ namespace BACakeShopManagementApplication
                         Console.WriteLine($"This {drinkName} drink has been added, the price is {drinkPrice}, the capacity is {drinkCapacity}, the ID is {drinkId}");
 
 
-                        //TODO: AddNewDrink
+                        
                         break;
 
                     case "7":
@@ -225,13 +224,28 @@ namespace BACakeShopManagementApplication
                         }
 
                         store.DisplayDrinks();
-                        //TODO: RemoveDrink()
                         break;
 
                     case "8":
                         Console.WriteLine("Please Enter the custmer name ");
                         string custmerName = Console.ReadLine();
-                        store.SearchCakeByCustomerName(custmerName);
+                        var custmerCakes =store.SearchCakeByCustomerName(custmerName);
+                        if (custmerCakes.Count != 0)
+                        {
+                            Console.WriteLine($"The {custmerCakes} has been found");
+                            foreach (var cake in custmerCakes)
+                            {
+                                cake.DisplayCakeDetailes();
+
+                            }
+                        }
+                        else
+                        {
+                            Console.WriteLine($"The {custmerCakes} can not found !");
+                            Console.WriteLine("Please press a key to return");
+                            Console.ReadKey();
+                            break;
+                        }
                         break;
 
                     case "99":

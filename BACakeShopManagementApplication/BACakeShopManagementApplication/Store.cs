@@ -99,6 +99,11 @@ namespace BACakeShopManagementApplication
             }
             return false;
         }
+
+        public List<Cake> SearchCakeByCustomerName(string customerName)
+        {
+            return Cakes.FindAll(c => c.CustmorName == customerName);
+        }
     }
 }
  

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 
 namespace BACakeShopManagementApplication
 {
@@ -19,16 +20,18 @@ namespace BACakeShopManagementApplication
         }
 
 
-        public void WriteMessageOnCake(string custmorName,string message)
+        public void WriteMessageOnCake(string customerName, string message)
         {
-            this.Message = message;
-            this.CustmorName = custmorName;
+            Message = message;
+            CustmorName = customerName;
         }
 
         public void DisplayCakeDetailes()
         {
-            Console.WriteLine($"Cake Name: \t{Name}\nCake Price: \t{Price}\nCake ID: \t{Id}\n");
+            Console.WriteLine($"Cake Name: \t{Name}\nCake Price: \t{Price}\nCake ID: \t{Id}\nCustmer Name: \t{CustmorName}\nWriting Message: \t{Message}\n");
         }
+
+        
 
        
     }

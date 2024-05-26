@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
@@ -117,6 +118,9 @@ namespace BACakeShopManagementApplication
 
                         }
                         Console.WriteLine($"This {cakeName} cake has been added, the price is {cakePrice}, the ID is {cakeId}");
+                        Console.WriteLine("Press a key return to main menu.");
+                        Console.ReadKey();
+                        Console.Clear();
 
                         break;
 
@@ -138,18 +142,38 @@ namespace BACakeShopManagementApplication
                         else
                         {
                             Console.WriteLine($"This {removeCake} cake you want remove can not found!");
-
+                            Console.WriteLine("Please press a key to return");
+                            Console.ReadKey();
+                            break;
                         }
 
                         store.DisplayCakes();
-
-
-
                         break;
 
                     case "5":
+                        
+                        Console.WriteLine("Please enter the ID of the cake which you want add a writing message.");
+                        int idAddWritingCake= Convert.ToInt32(Console.ReadLine());
+                        Cake addWritingCake = store.Cakes.Find(c => c.Id == idAddWritingCake);
+                       
+                        if (addWritingCake != null) 
+                        {
+                            Console.WriteLine($"The ID {idAddWritingCake} cake was founded");
+                            Console.WriteLine("Please enter the custmer name");
+                            var customerName = Console.ReadLine();
+                            Console.WriteLine("Please enter the message");
+                            var message = Console.ReadLine();
+                            addWritingCake.WriteMessageOnCake(customerName, message);
+                            addWritingCake.DisplayCakeDetailes();
 
-                        Console.WriteLine("Adding writing on cake");
+                        }
+                        else
+                        {
+                            Console.WriteLine($"The ID {idAddWritingCake} of cake can not found!");
+                            Console.WriteLine("Please press a key to return");
+                            Console.ReadKey();
+                            break;
+                        }
                         //TODO: AddWritingOnCake()
                         break;
 
@@ -183,7 +207,7 @@ namespace BACakeShopManagementApplication
 
 
                         Console.WriteLine("You will Remove an existing drink and Display the Detail Again");
-                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("--------------------------------------------------------------");
                         Console.WriteLine("Please enter the ID of the existing drink");
                         int idDrinkRemove = Convert.ToInt32(Console.ReadLine());
 
@@ -205,9 +229,9 @@ namespace BACakeShopManagementApplication
                         break;
 
                     case "8":
-
-                        Console.WriteLine("Search cake (by custmer name)");
-                        //TODO: SearchCakeByUserName()
+                        Console.WriteLine("Please Enter the custmer name ");
+                        string custmerName = Console.ReadLine();
+                        store.SearchCakeByCustomerName(custmerName);
                         break;
 
                     case "99":

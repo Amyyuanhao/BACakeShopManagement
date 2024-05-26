@@ -47,6 +47,7 @@
     <Compile Include="Drink.cs" />
     <Compile Include="IManagement.cs" />
     <Compile Include="Item.cs" />
+    <Compile Include="LoginPage.cs" />
     <Compile Include="Manager.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

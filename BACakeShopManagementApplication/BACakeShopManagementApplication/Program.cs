@@ -28,18 +28,38 @@ namespace BACakeShopManagementApplication
             //TODO: -8. SearchCakeByCustmerName
             //TODO: -99. Exit
 
+            Store store = new Store("BA", "addr", "1121", "Baibai", "123");
 
-            var store = new Store("BA", "addr", "1121", "Baibai", "123");
+            //welcome message
+            Console.WriteLine("--------------------------------------------------------------");
+            Console.WriteLine("------- WELCOME TO BA CAKE SHOP MANAGEMENT APPLICATION -------");
+            Console.WriteLine("--------------------------------------------------------------");
 
-            Console.WriteLine("------------------------------------------------------------");
-            Console.WriteLine("-------WELCOME TO BA CAKE SHOP MANAGEMENT APPLICATION-------");
-            Console.WriteLine("------------------------------------------------------------");
-            store.DisplayCakeStoreDitails("BA Bakery Store", "addr", "1121");
+            store.DisplayCakeStoreDitails("BA Cake Shop", "Sweeties street", "5201314");
 
+            Console.WriteLine("------------------- Please Log In The App --------------------");
+            Console.WriteLine();
+
+            //Declare the Manager List
+            List<Manager> managers = new List<Manager>();
+
+            Manager Bai = new Manager("Bai", 001, "bai123");
+            Manager Amy = new Manager("Amy", 002, "amy123");
+
+
+            managers.Add(Bai);
+            managers.Add(Amy);
+
+            //Call loginmanager method
+            LoginPage.IdentityCheck(managers);
+            AppSelectionMenu(store);
+        }
+        public static void AppSelectionMenu(Store store)
+        {
             var exitSystem = false;
             //List<Cake> Cakes = new List<Cake>();
 
-            
+
             //writeline menu items
 
 
@@ -54,14 +74,14 @@ namespace BACakeShopManagementApplication
                 Console.WriteLine("6. Add drink");
                 Console.WriteLine("7. Remove drink");
                 Console.WriteLine("8. Search Cake by custmer name");
-                Console.WriteLine("99. Exit");                           
+                Console.WriteLine("99. Exit");
 
                 string selectedAction = Console.ReadLine();
 
                 switch (selectedAction)
 
                 {
-                    
+
                     case "1":
                         Console.WriteLine("Adding new manager");
                         //TODO: AddNewManager()
@@ -90,14 +110,14 @@ namespace BACakeShopManagementApplication
                         }
 
                         store.AddCake(cakeName, cakePrice, cakeId);
-                       
+
                         foreach (Cake cakeN in store.Cakes)
                         {
                             cakeN.DisplayCakeDetailes();
 
                         }
                         Console.WriteLine($"This {cakeName} cake has been added, the price is {cakePrice}, the ID is {cakeId}");
-                      
+
                         break;
 
                     case "4":
@@ -105,7 +125,7 @@ namespace BACakeShopManagementApplication
                         Console.WriteLine("You will Remove an existing cake and Display the Detail Again");
                         Console.WriteLine("-------------------------------------------------------------");
                         Console.WriteLine("Please enter the ID of the existing cake");
-                        int idCakeRemove= Convert.ToInt32(Console.ReadLine());
+                        int idCakeRemove = Convert.ToInt32(Console.ReadLine());
 
                         Cake removeCake = store.Cakes.Find(c => c.Id == idCakeRemove);
 
@@ -115,20 +135,20 @@ namespace BACakeShopManagementApplication
                             store.Cakes.Remove(removeCake);
                             Console.WriteLine($"This ID {idCakeRemove} of cake has been removed for the list ");
                         }
-                        else 
+                        else
                         {
                             Console.WriteLine($"This {removeCake} cake you want remove can not found!");
-                        
+
                         }
 
                         store.DisplayCakes();
-                       
 
-                       
+
+
                         break;
 
                     case "5":
-                        
+
                         Console.WriteLine("Adding writing on cake");
                         //TODO: AddWritingOnCake()
                         break;
@@ -144,7 +164,7 @@ namespace BACakeShopManagementApplication
                         Console.WriteLine("Please enter the drink ID");
                         var drinkId = Convert.ToInt32(Console.ReadLine());
                         Console.WriteLine("Please enter the capacity of the drink.");
-                        var drinkCapacity= Console.ReadLine();
+                        var drinkCapacity = Console.ReadLine();
 
                         store.AddDrink(drinkName, drinkPrice, drinkId, drinkCapacity);
 
@@ -185,13 +205,13 @@ namespace BACakeShopManagementApplication
                         break;
 
                     case "8":
-                        
+
                         Console.WriteLine("Search cake (by custmer name)");
                         //TODO: SearchCakeByUserName()
                         break;
 
                     case "99":
-                        
+
                         Console.WriteLine("Exit");
                         Environment.Exit(0);
                         break;
@@ -201,21 +221,9 @@ namespace BACakeShopManagementApplication
                         break;
 
                 }//end of switch
-                    
+
 
             }//end of while
-
-
-
-            
-
-            
-
-
-
-
-
-
         }
     }
 }

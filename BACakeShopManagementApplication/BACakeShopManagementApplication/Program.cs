@@ -37,7 +37,7 @@ namespace BACakeShopManagementApplication
             store.DisplayCakeStoreDitails("BA Bakery Store", "addr", "1121");
 
             var exitSystem = false;
-            //List<Cake> cakes = new List<Cake>();
+            //List<Cake> Cakes = new List<Cake>();
 
             
             //writeline menu items
@@ -83,16 +83,15 @@ namespace BACakeShopManagementApplication
                         Console.WriteLine("Please enter the cake ID");
                         var cakeId = Convert.ToInt32(Console.ReadLine());
 
-                        Cake newCake = new Cake(cakeName, cakePrice, cakeId);
-                        store.cakes.Add(newCake);
+                        store.AddCake(cakeName, cakePrice, cakeId);
                        
-                        foreach (Cake cakeN in store.cakes)
+                        foreach (Cake cakeN in store.Cakes)
                         {
                             cakeN.DisplayCakeDetailes();
 
                         }
                         Console.WriteLine($"This {cakeName} cake has been added, the price is {cakePrice}, the ID is {cakeId}");
-                        //TODO: AddNewCake()
+                      
                         break;
 
                     case "4":
@@ -102,12 +101,12 @@ namespace BACakeShopManagementApplication
                         Console.WriteLine("Please enter the ID of the existing cake");
                         int idCakeRemove= Convert.ToInt32(Console.ReadLine());
 
-                        Cake removeCake = store.cakes.Find(c => c.Id == idCakeRemove);
+                        Cake removeCake = store.Cakes.Find(c => c.Id == idCakeRemove);
 
                         if (removeCake != null)
                         {
                             Console.WriteLine($"{idCakeRemove} found in the list");
-                            store.cakes.Remove(removeCake);
+                            store.Cakes.Remove(removeCake);
                         }
                         else 
                         {
@@ -115,11 +114,10 @@ namespace BACakeShopManagementApplication
                         
                         }
 
-                        
                         store.DisplayCakes();
                        
 
-                        //TODO: RemoveCake()
+                       
                         break;
 
                     case "5":
@@ -129,8 +127,28 @@ namespace BACakeShopManagementApplication
                         break;
 
                     case "6":
-                        
-                        Console.WriteLine("Adding new drink");
+
+                        Console.WriteLine("You will Add a new Drink and then Display the Details Again");
+                        Console.WriteLine("--------------------------------------------------------------");
+                        Console.WriteLine("Please enter the drink name");
+                        var drinkName = Console.ReadLine();
+                        Console.WriteLine("Please enter the drink Price");
+                        var drinkPrice = Convert.ToDouble(Console.ReadLine());
+                        Console.WriteLine("Please enter the drink ID");
+                        var drinkId = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Please enter the capacity of the drink.");
+                        var drinkCapacity= Console.ReadLine();
+
+                        store.AddDrink(drinkName, drinkPrice, drinkId, drinkCapacity);
+
+                        foreach (Drink drinkN in store.Drinks)
+                        {
+                            drinkN.DisplayDrinkDetails();
+
+                        }
+                        Console.WriteLine($"This {drinkName} drink has been added, the price is {drinkPrice}, the capacity is {drinkCapacity}, the ID is {drinkId}");
+
+
                         //TODO: AddNewDrink
                         break;
 

@@ -17,10 +17,7 @@ namespace BACakeShopManagementApplication
             Price =cakePrice;
             Id = cakeId;
         }
-        public Cake(int cakeId)
-        {
-            Id= cakeId;
-        }
+
 
         public void WriteMessageOnCake(string custmorName,string message)
         {

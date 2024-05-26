@@ -10,8 +10,6 @@ namespace BACakeShopManagementApplication
     {
         public string Capacity { get; set; }
 
-        
-
         public Drink(string drinkName, double drinkPrice, int id, string drindCapacity)
         {
             Name = drinkName;

@@ -38,7 +38,7 @@ namespace BACakeShopManagementApplication
 
             store.DisplayCakeStoreDitails("BA Cake Shop", "Sweeties street", "5201314");
 
-            Console.WriteLine("------------------- Please Log In The App --------------------");
+            Console.WriteLine("******************** Please Log In The App ********************");
             Console.WriteLine();
 
             //Declare the Manager List
@@ -47,15 +47,14 @@ namespace BACakeShopManagementApplication
             Manager Bai = new Manager("Bai", 001, "bai123");
             Manager Amy = new Manager("Amy", 002, "amy123");
 
-
             managers.Add(Bai);
             managers.Add(Amy);
 
             //Call loginmanager method
             LoginPage.IdentityCheck(managers);
-            AppSelectionMenu(store);
+            AppSelectionMenu(store, managers);
         }
-        public static void AppSelectionMenu(Store store)
+        public static void AppSelectionMenu(Store store, List<Manager> managers)
         {
             var exitSystem = false;
             //List<Cake> Cakes = new List<Cake>();
@@ -85,13 +84,17 @@ namespace BACakeShopManagementApplication
 
                     case "1":
                         Console.WriteLine("Adding new manager");
-                        //TODO: AddNewManager()
+
+                        ManagerManagement managerManagement = new ManagerManagement();
+                        managerManagement.AddNewManager(managers);
                         Console.ReadKey();
                         break;
 
                     case "2":
-                        Console.WriteLine("Removing manager");
-                        //TODO: RemoveManager()
+                        Console.WriteLine("Removing a manager");
+                        ManagerManagement manageropeartion = new ManagerManagement();
+                        manageropeartion.DeleteManager(managers);
+                        Console.ReadKey();
                         break;
 
                     case "3":
@@ -174,7 +177,6 @@ namespace BACakeShopManagementApplication
                             Console.ReadKey();
                             break;
                         }
-                        //TODO: AddWritingOnCake()
                         break;
 
                     case "6":
@@ -198,9 +200,6 @@ namespace BACakeShopManagementApplication
 
                         }
                         Console.WriteLine($"This {drinkName} drink has been added, the price is {drinkPrice}, the capacity is {drinkCapacity}, the ID is {drinkId}");
-
-
-                        //TODO: AddNewDrink
                         break;
 
                     case "7":
@@ -225,7 +224,6 @@ namespace BACakeShopManagementApplication
                         }
 
                         store.DisplayDrinks();
-                        //TODO: RemoveDrink()
                         break;
 
                     case "8":

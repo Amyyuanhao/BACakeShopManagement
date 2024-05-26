@@ -14,7 +14,7 @@ namespace BACakeShopManagementApplication
             while (!loginSuccess)
             {
                 string inputManagerName, inputManagerPassword;
-
+               
 
                 Console.WriteLine("Please enter the Manager Name");
                 inputManagerName = Console.ReadLine();

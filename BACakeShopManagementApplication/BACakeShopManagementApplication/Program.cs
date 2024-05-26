@@ -74,7 +74,7 @@ namespace BACakeShopManagementApplication
                         break;
 
                     case "3":
-                        Console.WriteLine("You will Add a new Cake and then Display the Details Again");
+                        Console.WriteLine("You will Add a new Cake.");
                         Console.WriteLine("--------------------------------------------------------------");
                         Console.WriteLine("Please enter the cake name");
                         var cakeName = Console.ReadLine();
@@ -82,6 +82,12 @@ namespace BACakeShopManagementApplication
                         var cakePrice = Convert.ToDouble(Console.ReadLine());
                         Console.WriteLine("Please enter the cake ID");
                         var cakeId = Convert.ToInt32(Console.ReadLine());
+                        if (store.IsCakeIdUsed(cakeId))
+                        {
+                            Console.WriteLine("Please press a key to return");
+                            Console.ReadKey();
+                            break;
+                        }
 
                         store.AddCake(cakeName, cakePrice, cakeId);
                        
@@ -107,6 +113,7 @@ namespace BACakeShopManagementApplication
                         {
                             Console.WriteLine($"{idCakeRemove} found in the list");
                             store.Cakes.Remove(removeCake);
+                            Console.WriteLine($"This ID {idCakeRemove} of cake has been removed for the list ");
                         }
                         else 
                         {
@@ -153,8 +160,27 @@ namespace BACakeShopManagementApplication
                         break;
 
                     case "7":
-                        
-                        Console.WriteLine("Removing drink");
+
+
+                        Console.WriteLine("You will Remove an existing drink and Display the Detail Again");
+                        Console.WriteLine("-------------------------------------------------------------");
+                        Console.WriteLine("Please enter the ID of the existing drink");
+                        int idDrinkRemove = Convert.ToInt32(Console.ReadLine());
+
+                        Drink removeDrink = store.Drinks.Find(d => d.Id == idDrinkRemove);
+
+                        if (removeDrink != null)
+                        {
+                            Console.WriteLine($"{idDrinkRemove} found in the list");
+                            store.Drinks.Remove(removeDrink);
+                        }
+                        else
+                        {
+                            Console.WriteLine($"This {removeDrink} drink you want remove can not found!");
+
+                        }
+
+                        store.DisplayDrinks();
                         //TODO: RemoveDrink()
                         break;
 

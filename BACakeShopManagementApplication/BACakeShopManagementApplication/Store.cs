@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -87,6 +88,16 @@ namespace BACakeShopManagementApplication
                     drinkA.DisplayDrinkDetails();
                 }
             }
+        }
+        public bool IsCakeIdUsed(int cakeId)
+        {
+            var cake = Cakes.Find(c => c.Id == cakeId);
+            if (cake != null)
+            {
+                Console.WriteLine("The cake ID has been used.");
+                return true;
+            }
+            return false;
         }
     }
 }

@@ -46,7 +46,7 @@ namespace BACakeShopManagementApplication
         {
             if (this.Cakes.Count == 0)
             {
-                Console.WriteLine("No cake in the store");
+                Console.WriteLine("No cake in the store\n Please add your first Cake\n");
             }
             else
             {
@@ -79,7 +79,7 @@ namespace BACakeShopManagementApplication
         {
             if (this.Drinks.Count == 0)
             {
-                Console.WriteLine("No drink in the store");
+                Console.WriteLine("No drink in the store\n Please add your first Drink\n");
             }
             else
             {
@@ -94,7 +94,6 @@ namespace BACakeShopManagementApplication
             var cake = Cakes.Find(c => c.Id == cakeId);
             if (cake != null)
             {
-                Console.WriteLine("The cake ID has been used.");
                 return true;
             }
             return false;
@@ -103,6 +102,16 @@ namespace BACakeShopManagementApplication
         public List<Cake> SearchCakeByCustomerName(string customerName)
         {
             return Cakes.FindAll(c => c.CustmorName == customerName);
+        }
+
+        public bool IsDrinkIdUsed(int drinkId)
+        {
+            var drink = Drinks.Find(c => c.Id == drinkId);
+            if (drink != null)
+            {
+                return true;
+            }
+            return false;
         }
     }
 }

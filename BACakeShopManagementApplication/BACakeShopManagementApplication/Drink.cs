@@ -20,7 +20,7 @@ namespace BACakeShopManagementApplication
 
         public void DisplayDrinkDetails()
         {
-            Console.WriteLine($"Drink Name:    \t{Name}\nDrink Price:  \t{Price}\nDrink capacity:\t{Capacity}\nDrink ID:  \t{Id}\n");
+            Console.WriteLine($"Drink Name:    \t{Name}\nDrink Price:  \t${Price}\nDrink capacity:\t{Capacity}ml\nDrink ID:  \t{Id}\n");
         }
             
 

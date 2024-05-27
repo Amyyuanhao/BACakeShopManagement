@@ -19,7 +19,16 @@ namespace BACakeShopManagementApplication
             Id = cakeId;
         }
 
+        public Cake(string cakeName, double cakePrice, int cakeId, string customerName, string message)
+        {
+            Name = cakeName;
+            Price = cakePrice;
+            Id = cakeId;
+            Message = message;
+            CustmorName = customerName;
+        }
 
+       
         public void WriteMessageOnCake(string customerName, string message)
         {
             Message = message;
@@ -28,7 +37,7 @@ namespace BACakeShopManagementApplication
 
         public void DisplayCakeDetailes()
         {
-            Console.WriteLine($"Cake Name: \t{Name}\nCake Price: \t{Price}\nCake ID: \t{Id}\nCustmer Name: \t{CustmorName}\nWriting Message: \t{Message}\n");
+            Console.WriteLine($"Cake Name: \t{Name}\nCake Price: \t${Price}\nCake ID: \t{Id}\nCustmer Name: \t{CustmorName}\nWriting Message: \t{Message}\n");
         }
 
         

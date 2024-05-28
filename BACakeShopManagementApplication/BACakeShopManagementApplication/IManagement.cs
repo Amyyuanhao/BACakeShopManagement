@@ -8,13 +8,15 @@ namespace BACakeShopManagementApplication
 {
     internal interface IManagement
     {
-        void AddCake(string cakeName, double cakePrice, int cakeId);
-        void RemoveCake(int cakeId);
+        void AddCake();
+        void RemoveCake();
 
-        void AddDrink(string drinkName, double drinkPrice, int drinkId, string drinapacity);
-        
-        void RemoveDrink(int drinkId);
-       
+        void AddDrink();
+        void RemoveDrink();
+
+        void AddNewManager();
+        void RemoveManager();
+
     }
 }
  

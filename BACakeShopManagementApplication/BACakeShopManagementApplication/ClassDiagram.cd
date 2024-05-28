@@ -31,29 +31,22 @@
   <Class Name="BACakeShopManagementApplication.Manager">
     <Position X="0.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAACAgAAAAAAAAAAAABAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAACAgAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Manager.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BACakeShopManagementApplication.Store" BaseTypeListCollapsed="true">
     <Position X="3.75" Y="5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>CABAYAAAAAhgAAIAAAAgQAQEAAAIAAASAAAAAAAAAIA=</HashCode>
+      <HashCode>DABAYAAAAAhgAAIAAAQgQAQEAAAIAAASAAJAAAAAAIA=</HashCode>
       <FileName>Store.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Orientation="Right" Position="2.584" />
-  </Class>
-  <Class Name="BACakeShopManagementApplication.StoreManagement">
-    <Position X="0.75" Y="6.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>BAAAQQAAAABAAAAAAAQAAAAQIAAAAAAAAIIAAAAAAAA=</HashCode>
-      <FileName>StoreManagement.cs</FileName>
-    </TypeIdentifier>
+    <Lollipop Orientation="Right" Position="2.556" />
   </Class>
   <Interface Name="BACakeShopManagementApplication.IManagement">
     <Position X="6.25" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAQAAAAABAAAIAAAAAAAAAAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>BAAAQAAAAABAAAIAAAAAAAAAAAAIAAAAAABAAAAAAAA=</HashCode>
       <FileName>IManagement.cs</FileName>
     </TypeIdentifier>
   </Interface>

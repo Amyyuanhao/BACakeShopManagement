@@ -13,7 +13,7 @@ namespace BACakeShopManagementApplication
 
         void AddDrink(string drinkName, double drinkPrice, int drinkId, string drinapacity);
         
-
+        void RemoveDrink(int drinkId);
        
     }
 }

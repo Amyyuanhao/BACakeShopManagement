@@ -44,7 +44,7 @@ namespace BACakeShopManagementApplication
                         cakeN.DisplayCakeDetailes();
                         Console.WriteLine();
                     }
-                    Console.WriteLine("Please press any key to retuen to Main Menu");
+                    Console.WriteLine("Please press any key to return to Main Menu");
                     Console.ReadKey();
                  
                     keeprunninhg = false;
@@ -77,7 +77,7 @@ namespace BACakeShopManagementApplication
                         cakeN.DisplayCakeDetailes();
                         Console.WriteLine();
                     }
-                    Console.WriteLine("Please press any key to retuen to Main Menu");
+                    Console.WriteLine("Please press any key to return to Main Menu");
                     Console.ReadKey();
                     keeprunninhg = false;
                 }
@@ -127,7 +127,7 @@ namespace BACakeShopManagementApplication
                         Console.WriteLine();
 
                     }
-                    Console.WriteLine("Please press any key to retuen to Main Menu");
+                    Console.WriteLine("Please press any key to return to Main Menu");
                     Console.ReadKey();
 
                     keeprunninhg = false;
@@ -160,7 +160,7 @@ namespace BACakeShopManagementApplication
                         drinkY.DisplayDrinkDetails();
                         Console.WriteLine();
                     }
-                    Console.WriteLine("Please press any key to retuen to Main Menu");
+                    Console.WriteLine("Please press any key to return to Main Menu");
                     Console.ReadKey();
                     keeprunninhg = false;
                 }
@@ -194,7 +194,7 @@ namespace BACakeShopManagementApplication
             else
             {
                 Console.WriteLine($"{custmerCakes} can not found  Please check customer name!");
-                Console.WriteLine("Please press any key to retuen to Main Menu");
+                Console.WriteLine("Please press any key to return to Main Menu");
                 Console.ReadKey();
             }
         }
@@ -278,7 +278,7 @@ namespace BACakeShopManagementApplication
                     Console.WriteLine($"Currently have {managers.Count} managers");
 
                     keepRunning = false;
-                    Console.WriteLine("Please press any key to retuen to Main Menu");
+                    Console.WriteLine("Please press any key to retu=rn to Main Menu");
                     Console.WriteLine();
                     Console.ReadKey();
                 }
@@ -316,7 +316,7 @@ namespace BACakeShopManagementApplication
 
                     Console.WriteLine($"Currently have {managers.Count} managers");
 
-                    Console.WriteLine("Please press any key to retuen to Main Menu");
+                    Console.WriteLine("Please press any key to return to Main Menu");
                     Console.WriteLine();
                     Console.ReadKey();
                     keepRunning = false;

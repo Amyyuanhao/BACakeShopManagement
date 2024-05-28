@@ -32,9 +32,6 @@ namespace BACakeShopManagementApplication
                     Console.WriteLine("Sorry, You are unauthorized \nPlease check your name and password \nPlease Try Again!");
 
             }
-
         }
-
-
     }
 }

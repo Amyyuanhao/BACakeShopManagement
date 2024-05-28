@@ -79,52 +79,43 @@ namespace BACakeShopManagementApplication
                 Console.WriteLine("99. Exit");
 
                 string selectedAction = Console.ReadLine();
-                StoreManagement storeManagement = new StoreManagement();
                 switch (selectedAction)
                 {
                     case "1":
-
-                        storeManagement.AddNewManager(store.Managers);
+                        store.AddNewManager();
                         break;
 
                     case "2":
-
-                        storeManagement.DeleteManager(store.Managers);
+                        store.RemoveManager();
                         break;
 
                     case "3":
-
-                        storeManagement.AddCake(store);
+                        store.AddCake();
                         break;
 
                     case "4":
-
-                        storeManagement.DeleteCake(store);
+                        store.RemoveCake();
                         break;
 
                     case "5":
-
-                        storeManagement.addWritingOnCake(store);
+                        store.addWritingOnCake();
                         break;
 
                     case "6":
-
-                        storeManagement.AddDrink(store);
+                        store.AddDrink();
                         break;
 
                     case "7":
-
-                        storeManagement.DeleteDrink(store);
+                        store.RemoveDrink();
                         break;
 
                     case "8":
-
-                        storeManagement.itemSearch(store);
+                        store.SearchCakeByCustomerName();
                         break;
 
                     case "9":
 
-                        storeManagement.displayItemList(store);
+                        store.displayItemList();
                         break;
 
                     case "99":

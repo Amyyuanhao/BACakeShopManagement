@@ -11,12 +11,11 @@ namespace BACakeShopManagementApplication
     {
         private readonly string _name;
 
-        public Store(string name, string address, string phonenumber, string managerName, string managerPassword)
+        public Store(string name, string address, string phonenumber)
         {
             _name = name;
             Address = address;
             Phonenumber = phonenumber;
-            Managers.Add(new Manager(managerName, 1, managerPassword));
         }
 
         public string Name 
@@ -375,26 +374,26 @@ namespace BACakeShopManagementApplication
 
             while (keepRunning)
             {
-                string deleteManagerName;
+                int deleteManagerID;
                 Console.WriteLine("***You are Removing a manager***");
 
-                Console.WriteLine("Please enter the Manager Name you want to delete");
-                deleteManagerName = Console.ReadLine();
+                Console.WriteLine("Please enter the Manager ID you want to delete");
+                deleteManagerID = Convert.ToInt32(Console.ReadLine());
 
-                bool existName = false;
+                bool existID = false;
                 foreach (Manager manager in Managers)
                 {
-                    if (deleteManagerName == manager.Name)
+                    if (deleteManagerID == manager.Id)
                     {
-                        existName = true;
+                        existID= true;
                     }
                 }
-                if (existName)
+                if (existID)
                 {
-                    Manager removeManager = Managers.Find(c => c.Name == deleteManagerName);
+                    Manager removeManager = Managers.Find(c => c.Id == deleteManagerID);
                     Managers.Remove(removeManager);
 
-                    Console.WriteLine($"Now manager {deleteManagerName} has been delete successfully");
+                    Console.WriteLine($"Now manager {deleteManagerID} has been delete successfully");
 
                     Console.WriteLine($"Currently have {Managers.Count} managers");
 

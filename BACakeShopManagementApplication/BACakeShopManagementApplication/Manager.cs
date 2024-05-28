@@ -11,22 +11,12 @@ namespace BACakeShopManagementApplication
         public Manager(string name, int id, string passWord)
         {
             Name = name;
-            _id = id;
+            Id = id;
             PassWord = passWord;
         }
 
-        private readonly int _id;
-
-        
         public string PassWord { get; set; }
-        
-
-        public string Name { get; set; } 
-        public int Id 
-        { 
-            get { return _id; } 
-        }
-        
-        
-    }
+        public string Name { get; set; }
+        public int Id { get; set; }
+    }    
 }

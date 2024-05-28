@@ -8,8 +8,12 @@ namespace BACakeShopManagementApplication
 {
     internal class LoginPage
     {
+
+
         public static void IdentityCheck(List<Manager> managers)
         {
+            Console.WriteLine("******************** Please Log In The App ********************");
+            Console.WriteLine();
             bool loginSuccess = false;
             while (!loginSuccess)
             {
@@ -29,7 +33,7 @@ namespace BACakeShopManagementApplication
                 }
 
                 if (!loginSuccess)
-                    Console.WriteLine("Sorry, You are unauthorized \nPlease check your name and password \nPlease Try Again!");
+                    Console.WriteLine("Sorry, You are unauthorized \nPlease check your name and password \nTry Again!");
 
             }
         }

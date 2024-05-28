@@ -12,7 +12,7 @@ namespace BACakeShopManagementApplication
     { 
         static void Main(string[] args)
         {
-            Store store = new Store("BA", "addr", "1121", "Baibai", "123");
+            Store store = new Store("BA", "addr", "1121");
             initStore(store);
             //welcome message
             Console.WriteLine("--------------------------------------------------------------");
@@ -21,8 +21,7 @@ namespace BACakeShopManagementApplication
 
             store.DisplayCakeStoreDitails("BA Cake Shop", "Sweeties street", "5201314");
 
-            Console.WriteLine("******************** Please Log In The App ********************");
-            Console.WriteLine();
+           
 
 
 

@@ -26,15 +26,15 @@ namespace BACakeShopManagementApplication
 
 
             //Call loginmanager method
-            LoginPage.IdentityCheck(store.Managers);
+            //LoginPage.IdentityCheck(store.Managers);
             AppSelectionMenu(store);
         }
         private static void initStore(Store store)
         {
             //Declare Manager List
-            Manager Bai = new Manager("Bai", 001, "bai123");
-            Manager Amy = new Manager("Amy", 002, "amy123");
-            Manager Richa = new Manager("Richa", 003, "richa123");
+            Manager Bai = new Manager("Bai", 1, "bai123");
+            Manager Amy = new Manager("Amy", 2, "amy123");
+            Manager Richa = new Manager("Richa", 3, "richa123");
 
             store.Managers.Add(Bai);
             store.Managers.Add(Amy);
@@ -128,6 +128,7 @@ namespace BACakeShopManagementApplication
 
                     default:
                         Console.WriteLine("Wrong choice.. Please try again");
+                        Console.WriteLine();
                         break;
 
                 }//end of switch

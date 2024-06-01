@@ -17,7 +17,7 @@ namespace BACakeShopManagementApplication
 
             while (!exitInput)
             {
-                Console.WriteLine("Please enter the cake Price");
+                Console.WriteLine("Please enter the Price");
                 var stringPrice = Console.ReadLine();
                 try
                 {

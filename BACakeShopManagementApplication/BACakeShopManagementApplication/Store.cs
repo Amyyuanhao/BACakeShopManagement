@@ -40,9 +40,8 @@ namespace BACakeShopManagementApplication
                 Console.WriteLine("-------------------------------");
 
                 Console.WriteLine("Please enter the cake name");
-                string cakeName = Console.ReadLine();
-                Console.WriteLine("Please enter the cake Price");
-                double cakePrice = Convert.ToDouble(Console.ReadLine());
+                string cakeName = Console.ReadLine();                
+                double cakePrice = HelperMethods.InputPrice();
                 Console.WriteLine("Please enter the cake ID");
                 int cakeId = Convert.ToInt32(Console.ReadLine());
 
@@ -144,8 +143,7 @@ namespace BACakeShopManagementApplication
 
                 Console.WriteLine("Please enter the drink name");
                 var drinkName = Console.ReadLine();
-                Console.WriteLine("Please enter the drink Price");
-                var drinkPrice = Convert.ToDouble(Console.ReadLine());
+                var drinkPrice = HelperMethods.InputPrice();
                 Console.WriteLine("Please enter the drink ID");
                 var drinkId = Convert.ToInt32(Console.ReadLine());
                 Console.WriteLine("Please enter the capacity of the drink.");
@@ -385,7 +383,7 @@ namespace BACakeShopManagementApplication
                 {
                     if (deleteManagerID == manager.Id)
                     {
-                        existID= true;
+                        existID = true;
                     }
                 }
                 if (existID)
@@ -407,8 +405,7 @@ namespace BACakeShopManagementApplication
                     Console.WriteLine("Can not find this Manager\nPlease check the Name and enter again");
                 }
             }
-        }
+        }        
     }
-
 }
  

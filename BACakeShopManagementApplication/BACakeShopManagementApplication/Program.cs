@@ -74,7 +74,10 @@ namespace BACakeShopManagementApplication
                 Console.WriteLine("6. Add drink");
                 Console.WriteLine("7. Remove drink");
                 Console.WriteLine("8. Search Cake by custmer name");
-                Console.WriteLine("9. Display Item List");
+                Console.WriteLine("9. List items in stock"); 
+
+
+
                 Console.WriteLine("99. Exit");
 
                 string selectedAction = Console.ReadLine();

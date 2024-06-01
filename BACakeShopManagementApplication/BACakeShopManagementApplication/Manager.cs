@@ -8,6 +8,9 @@ namespace BACakeShopManagementApplication
 {
     internal class Manager
     {
+        private int managerId;
+
+        public int id{ get; set; }
         public Manager(string name, int id, string passWord)
         {
             Name = name;

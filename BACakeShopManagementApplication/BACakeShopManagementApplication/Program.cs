@@ -66,7 +66,7 @@ namespace BACakeShopManagementApplication
             while (!exitSystem)
             {
                 Console.WriteLine("Please select the operation: ");
-                Console.WriteLine("1. Add Manager");
+                Console.WriteLine("1. Manager Registration");
                 Console.WriteLine("2. Remove Manager");
                 Console.WriteLine("3. Add cake");
                 Console.WriteLine("4. Remove cake");

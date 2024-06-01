@@ -140,7 +140,7 @@ namespace BACakeShopManagementApplication
                 Console.WriteLine("***You are Adding a new Drink***");
                 Console.WriteLine("--------------------------------");
                 Console.WriteLine();
-
+  
                 Console.WriteLine("Please enter the drink name");
                 var drinkName = Console.ReadLine();
                 var drinkPrice = HelperMethods.InputPrice();
@@ -154,7 +154,7 @@ namespace BACakeShopManagementApplication
                 if (alreadyexist)
                 {
                     Console.WriteLine("The drink ID has been used.");
-                    Console.WriteLine("Please try another Cake ID");
+                    Console.WriteLine("Please try another Drink ID");
                 }
                 else
                 {
@@ -328,7 +328,7 @@ namespace BACakeShopManagementApplication
                 string newManagerName, newManagerPassword;
                 int newManagerId;
 
-                Console.WriteLine("***You are Adding new manager***");
+                Console.WriteLine("***You are signing up a new manager***");
 
                 Console.WriteLine("Please enter the new Manager Name");
                 newManagerName = Console.ReadLine();
@@ -336,6 +336,7 @@ namespace BACakeShopManagementApplication
                 newManagerPassword = Console.ReadLine();
                 Console.WriteLine("Please enter the new manager ID");
                 newManagerId = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine();
 
                 bool alreadyExist = false;
                 foreach (Manager manager in Managers)
@@ -343,7 +344,7 @@ namespace BACakeShopManagementApplication
                     if (newManagerName == manager.Name)
                     {
                         alreadyExist = true;
-                        Console.WriteLine("This manager name has been used, please change one");
+                        Console.WriteLine("This manager information has been used. Please use another one");
                     }
                 }
 
@@ -352,13 +353,14 @@ namespace BACakeShopManagementApplication
                     Manager manager = new Manager(newManagerName, newManagerId, newManagerPassword);
                     Managers.Add(manager);
 
-                    Console.WriteLine($"New manager {newManagerName} has been added successfully, the password is {newManagerPassword}, manager ID is {newManagerId}");
+                    Console.WriteLine($"New manager {newManagerName} registration has been successfully \nPassword: \t {newManagerPassword}\nManager ID: \t{newManagerId}");
 
                     Console.WriteLine($"Currently have {Managers.Count} managers");
+                    Console.WriteLine();
 
                     keepRunning = false;
-                    Console.WriteLine("Please press any key to retuen to Main Menu");
                     Console.WriteLine();
+                    Console.WriteLine("Please press any key to retuen to Main Menu");
                     Console.ReadKey();
                 }
 
@@ -391,18 +393,18 @@ namespace BACakeShopManagementApplication
                     Manager removeManager = Managers.Find(c => c.Id == deleteManagerID);
                     Managers.Remove(removeManager);
 
-                    Console.WriteLine($"Now manager {deleteManagerID} has been delete successfully");
-
-                    Console.WriteLine($"Currently have {Managers.Count} managers");
-
-                    Console.WriteLine("Please press any key to retuen to Main Menu");
+                    Console.WriteLine($"Manager ID: {deleteManagerID} has been remove successfully");
                     Console.WriteLine();
+                    Console.WriteLine($"Currently have {Managers.Count} managers");
+                    Console.WriteLine();
+                    Console.WriteLine("Please press any key to retuen to Main Menu");
                     Console.ReadKey();
                     keepRunning = false;
                 }
                 else
                 {
-                    Console.WriteLine("Can not find this Manager\nPlease check the Name and enter again");
+                    Console.WriteLine("Can not find this Manager ID\nPlease check the ID and enter again");
+                    Console.WriteLine();
                 }
             }
         }        

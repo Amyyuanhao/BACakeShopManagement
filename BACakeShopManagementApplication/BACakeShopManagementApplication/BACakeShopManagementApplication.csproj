@@ -45,6 +45,7 @@
   <ItemGroup>
     <Compile Include="Cake.cs" />
     <Compile Include="Drink.cs" />
+    <Compile Include="HelperMethods.cs" />
     <Compile Include="IManagement.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="LoginPage.cs" />

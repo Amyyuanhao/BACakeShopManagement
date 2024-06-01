@@ -3,12 +3,12 @@
   <Class Name="BACakeShopManagementApplication.Cake">
     <Position X="8.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AEAAAAAAAAAgAAAAAAAACAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
+      <HashCode>AEAAAAAAAAAgAAEAAAAACAAAAAAAAAAAAAAAIAAAAAA=</HashCode>
       <FileName>Cake.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="BACakeShopManagementApplication.Drink">
-    <Position X="6.75" Y="2.75" Width="1.5" />
+    <Position X="6.25" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Drink.cs</FileName>
